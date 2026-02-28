@@ -2,6 +2,7 @@
 {
   imports = [
     ./alacritty.nix
+    ./fzf.nix
     ./nixvim.nix
     ./tmux.nix
   ];
