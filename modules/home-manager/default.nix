@@ -1,5 +1,10 @@
 { config, lib, ... }:
 {
+  imports = [
+    ./nixvim.nix
+    ./tmux.nix
+  ];
+
   options.everforest = {
     enable = lib.mkEnableOption "Everforest";
 
@@ -27,14 +32,5 @@
 
   config = lib.mkIf config.everforest.enable {
     lib.everforest.palette = import ./../../palettes/${config.everforest.variant}/${config.everforest.flavour}.nix;
-
-    programs.nixvim = {
-      colorschemes.everforest = {
-        enable = true;
-        settings.background = config.everforest.flavour;
-      };
-
-      opts.background = config.everforest.variant;
-    };
   };
 }
