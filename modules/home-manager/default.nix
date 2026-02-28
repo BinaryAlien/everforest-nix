@@ -1,6 +1,7 @@
 { config, lib, ... }:
 {
   imports = [
+    ./alacritty.nix
     ./nixvim.nix
     ./tmux.nix
   ];
