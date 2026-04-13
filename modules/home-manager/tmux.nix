@@ -4,6 +4,7 @@
     extraConfig = lib.mkBefore (
       with config.lib.everforest.palette;
       ''
+        set-option -g clock-mode-colour             "${blue}"
         set-option -g copy-mode-current-match-style "bg=${red},fg=${bg0}"
         set-option -g copy-mode-mark-style          "bg=${bg_purple},fg=${fg}"
         set-option -g copy-mode-match-style         "bg=${green},fg=${bg0}"
